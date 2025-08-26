@@ -92,87 +92,66 @@
   font-weight: bold;
 }
 
-/* Pantalla completa base */
 .pantalla-completa {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(1.5rem, 5vw, 3rem); /* Se adapta al tamaño */
+  font-size: 3rem;
   text-align: center;
   margin: 0;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
-/* Overlay full screen */
 .overlay {
   position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  display: flex; justify-content: center; align-items: center;
   z-index: 9999;
 }
-.overlay.hidden {
-  display: none !important;
-}
+.overlay.hidden { display: none; }
 
-/* Video responsive */
+
 .overlay video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* que se vea completo sin recortar */
-  background: #000;
-  border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto; /* se adapta según la proporción del video */
+    max-height: 100%; /* no se salga de la pantalla */
+    object-fit: cover;
+    transform: translate(-50%, -50%);
 }
 
-/* Botones */
+/* Opcional: ajustar específicamente para móviles */
+@media (max-width: 768px) {
+    .overlay video {
+        height: 24%; /* o 60%, según necesites */
+    }
+}
+
 #outroButtons {
   position: absolute;
-  bottom: 8%;
+  bottom: 10%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
   width: 100%;
-  padding: 0 1rem;
-  box-sizing: border-box;
 }
 
 #outroButtons button {
   padding: 12px 20px;
   border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #111;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.9);
+  color: #000;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.25s, transform 0.15s;
-  min-width: 44px;  /* accesible en móvil */
-  min-height: 44px; /* accesible en móvil */
-}
-#outroButtons button:hover {
-  background: #ffd700;
-  transform: translateY(-2px);
-}
-#outroButtons button:active {
-  transform: scale(0.96);
+  transition: background 0.3s;
 }
 
-/* Ajustes Responsive */
-@media (max-width: 480px) {
-  #outroButtons {
-    flex-direction: column;
-    bottom: 5%;
-    gap: 12px;
-  }
-  #outroButtons button {
-    width: 100%;
-    font-size: 0.95rem;
-  }
+#outroButtons button:hover {
+  background: #ffd700;
 }

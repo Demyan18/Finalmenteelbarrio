@@ -174,6 +174,3 @@ btnPrev.addEventListener("click", () => {
 btnNext.addEventListener("click", () => {
   window.location.href = "capitulo-siguiente.html";
 });
-btnMenu.addEventListener("click", () => {
-  window.location.href = "menu-capitulos.html";
-});
