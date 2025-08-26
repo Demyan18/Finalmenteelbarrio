@@ -77,16 +77,6 @@ window.addEventListener('load', () => {
   // 🔒 Bloquear scroll mientras carga o se reproduce el video
   document.body.style.overflow = "hidden";
 
-  // 📌 Verificar si el usuario ya vio la intro
-  const alreadySeen = localStorage.getItem("introSeen");
-
-  if (alreadySeen) {
-    // Si ya la vio, ocultamos directamente
-    introOverlay.classList.add('hidden');
-    document.body.style.overflow = "auto";
-    return;
-  }
-
   // Reproducir el video normalmente
   introVideo.volume = 1;
   introVideo.muted = false;
