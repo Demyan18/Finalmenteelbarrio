@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>📖 El Barrio - Biblioteca Interactiva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/biblioteca.css">
+</head>
+<body>
+    <button class="btn-back" onclick="history.back()">⬅ Volver</button>
+  <main>
+    <h1>📖 El Barrio</h1>
+    <p>Elige un libro para comenzar tu viaje narrativo.</p>
+
+    <div class="libros">
+      <!-- LIBRO 1: ACTIVADO -->
+      <div class="card">
+        <img src="images/portada.jpg" alt="Portada Libro 1">
+        <h3>ARCO 1: Nunca Confíes En La Confianza</h3>
+        <p>UN BARRIO, UN ASESINATO, UN CASO, UN CULPABLE.</p>
+        <button onclick="location.href='capitulos.html'">Entrar</button>
+      </div>
+
+      <!-- LIBRO 2: DESACTIVADO -->
+      <div class="card">
+        <img src="images/misterio.png" alt="Portada Libro 2">
+        <h3>(Próximamente)</h3>
+        <p>Libro aún en desarrollo. Muy pronto...</p>
+        <button class="disabled" disabled>Bloqueado</button>
+      </div>
+
+      <!-- LIBRO 3: DESACTIVADO -->
+      <div class="card">
+        <img src="images/misterio.png" alt="Portada Libro 3">
+        <h3>(Próximamente)</h3>
+        <p>Libro aún en desarrollo. Muy pronto...</p>
+        <button class="disabled" disabled>Bloqueado</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 El barrio | Todos los derechos reservados
+  </footer>
+
+  <div class="firma">
+    Diseñado por Eydam Malpartida
+  </div>
+
+</body>
+</html>

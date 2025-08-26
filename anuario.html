@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuario - El barrio</title>
+    <link rel="stylesheet" href="css/anuario.css">
+</head> 
+<body>
+
+    <div class="anuario-contenedor">
+
+        <!-- Encabezado del Anuario -->
+        <header>
+            <h1>Anuario</h1>
+            <p>Arco numero 1 personajes</p>
+        </header>
+
+        <!-- Botones superiores -->
+            <div class="botones-superiores">
+                <a href="/" class="btn boton-regresar">Regresar</a>
+                <button class="btn boton-prox" disabled>Próximamente: Arco 2</button>
+            </div>
+        </header>
+
+         <!-- Botón para mostrar personajes -->
+        <button class="mostrar-btn" onclick="togglePersonajes()" id="toggleBtn">
+            Ver personajes
+        </button>
+
+
+        <!-- Galería de personajes -->
+        <div class="anuario-grid" id="personajesGrid">
+
+            <!-- Entrada 1 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/alberto.jpg" alt="Personaje 1">
+                    <h2>Alberto</h2>
+                    <p>Puedo ser feliz... o el mejor perdedor que todos aplauden menos yo.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/alberto.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Twenty One Pilots - Stressed Out” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 2 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/dorian.jpg" alt="Personaje 2">
+                    <h2>Dorian</h2>
+                    <p>Me volví eco de otros, solo para no sentir el silencio de estar solo.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/dorian.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Artemas - dirty little secret” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 3 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/elena.jpg" alt="Personaje 3">
+                    <h2>Elena</h2>
+                    <p>Me rompí intentando ser perfecta… y todo se derrumbó igual.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/elena.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Class Actress - Journal Of Ardency” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 4 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/gabi.jpg" alt="Personaje 3">
+                    <h2>Gabi</h2>
+                    <p>No puedo fallarles… porque sin eso, siento que no valgo nada.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/gabi.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Sila Lua - Nada” | Versión editada</p>
+                </div>
+            </section>
+
+            
+            <!-- Entrada 5 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/isabel.jpg" alt="Personaje 3">
+                    <h2>Isabel</h2>
+                    <p>Perder no es una opción, porque si no gano, ¿entonces qué soy?.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/isabel.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Chinese American Bear - Take Me To Beijing ” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 6 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/jesus.jpg" alt="Personaje 3">
+                    <h2>Jesus</h2>
+                    <p>No siempre tomo las mejores decisiones, pero siempre doy hasta lo que no tengo por quien quiero.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/jesus.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Jósean Log - Chachachá” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 7 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/joaquin.jpg" alt="Personaje 3">
+                    <h2>Joaquin</h2>
+                    <p>Ser yo o lo que quieren que sea… nunca fui libre de elegir.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/joaquin.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Rubio - Invierno” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 8 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/leonel.jpg" alt="Personaje 3">
+                    <h2>Leonel</h2>
+                    <p>Siempre tengo que ser el mejor… para que mamá crea que valgo algo.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/leonel.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Damaged Bug - Jet In Jungle” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 9 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/lizbeth.jpg" alt="Personaje 3">
+                    <h2>Elizabeth</h2>
+                    <p>A veces ser la mejor amiga duele más que ser la persona amada.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/lizbeth.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Reik - Yo Quisiera” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 10 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/luis.jpg" alt="Personaje 3">
+                    <h2>Luis</h2>
+                    <p>Molestar es la única forma que encontré para que me noten.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/luis.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Gonzalo genek - A veces” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 11 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/max.jpg" alt="Personaje 3">
+                    <h2>Max</h2>
+                    <p>Me duele más cuando los demás dicen lo que yo ya temo de mí.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/max.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “SKILLBEA - 2001” | Versión editada</p>
+                </div>
+            </section>
+
+
+            <!-- Entrada 12 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/rodrigo.jpg" alt="Personaje 3">
+                    <h2>Rodrigo</h2>
+                    <p>No nací malo, solo aprendí a serlo cuando ser bueno ya no funcionó.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/rodrigo.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Depresión Sonora - Mala” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 13 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/rosangela.jpg" alt="Personaje 3">
+                    <h2>Rosangela</h2>
+                    <p>Hay verdades que solo el silencio se atreve a confesar.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/rosangela.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Pablo Alborán - Saturno” | Versión editada</p>
+                </div>
+            </section>
+
+
+            <!-- Entrada 14 -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/selena.jpg" alt="Personaje 3">
+                    <h2>Selena</h2>
+                    <p>Elegir a esta edad es como caminar con dos toneladas en la espalda… sin saber a dónde vas.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/selena.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “Princesa Alba – Convéncete” | Versión editada</p>
+                </div>
+            </section>
+
+            <!-- Entrada 15  -->
+            <section class="anuario-item-scroll">
+                <div class="anuario-item">
+                    <img src="images/yair.jpg" alt="Personaje 3">
+                    <h2>Yair</h2>
+                    <p>El dinero no compra la felicidad, pero en un mundo roto, a veces compra un respiro.</p>
+                    <div class="custom-audio">
+                        <button class="btn-audio" onclick="togglePlay(this)">▶️ Reproducir</button>
+                        <audio src="audios/yair.mp3" preload="auto"></audio>
+                    </div>
+                    <p class="creditos">Créditos: “The Drums - Money” | Versión editada</p>
+                </div>
+            </section>
+
+
+        </div>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>&copy; 2025 El barrio | Todos los derechos reservados</p>
+        </footer>
+
+    </div>
+
+    <script src="js/reproducir.js"></script>
+    <script src="js/reproducir2.js"></script>
+    <script src="js/personajes.js"></script>
+
+</body>
+</html>

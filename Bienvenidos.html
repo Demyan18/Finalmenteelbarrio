@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="El barrio: una historia cruda sobre juventud, decisiones y sueños. Descubre sinopsis, música y más contenido exclusivo.">
+  <meta name="author" content="El barrio">
+  <meta name="copyright" content="El barrio 2025">
+  <title>El barrio - Portada</title>
+  <link rel="stylesheet" href="css/estilosinicio.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Botones principales en esquina superior izquierda -->
+  <nav class="menu-principal">
+  <button onclick="location.href='elbarrio.html'" class="boton-nav">📖 El barrio</button>
+  <button onclick="location.href='historias.html'" class="boton-nav">📘 Historias Breves</button>
+  <button onclick="location.href='anuario.html'" class="boton-nav">📗 Anuario</button>
+</nav>
+
+
+  <div class="portada-inicio">
+    <header class="portada-header">
+    </header>
+
+    <section class="portada-carrusel seccion-transparente">
+      <h3>✨ Lo nuevo que se viene</h3>
+      <div class="carrusel-container">
+        <button class="carrusel-btn izq" onclick="moverCarrusel(-1)">⬅️</button>
+        <div class="carrusel" id="carrusel">
+          <img src="images/portadahorizontal.png" alt="Personaje 1">
+          <img src="images/anuario.png" alt="Modo noche">
+          <img src="images/proximamente.jpg" alt="Anuario">
+        </div>
+        <button class="carrusel-btn der" onclick="moverCarrusel(1)">➡️</button>
+      </div>
+    </section>
+
+    <div class="audio-contenedor">
+      <button id="botonAudio">▶️ Reproducir Cancion</button>
+      <p class="creditos">Créditos: “Avi Snow - Fairytales” | Versión editada</p>
+      <audio id="arco1" src="audios/arco1.mp3"></audio>
+    </div>
+
+    <section class="portada-descripcion seccion-transparente">
+      <p>Estamos trabajando para mejorar cada vez mas. gracias.</p>
+    </section>
+
+    <section class="portada-sinopsis seccion-transparente">
+      <h3>📖 Sinopsis</h3>
+      <label for="selectorSinopsis">Selecciona un contenido:</label>
+      <select id="selectorSinopsis">
+        <option value="" selected disabled>— ESCOGE —</option>
+        <option value="arco1">Arco 1: Nunca confíes en la confianza</option>
+      </select>
+      <div id="textoSinopsis" class="texto-sinopsis">
+        <p class="texto-default">Selecciona un arco para leer la sinopsis.</p>
+      </div>
+    </section>
+
+    <section class="portada-foto-conmemorativa seccion-transparente">
+      <h3>📸 Imagen conmemorativa</h3>
+      <img src="images/portada.jpg" alt="Foto conmemorativa" />
+      <p class="texto-foto">“Recordando los comienzos de este viaje urbano lleno de emociones.”</p>
+    </section>
+
+    <section class="portada-musica">
+      <h3>🎵 Playlist oficial</h3>
+      <div class="spotify-box">
+        <iframe src="https://open.spotify.com/embed/playlist/6P1nyaXWvWOkOng01Tk7oi?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </section>
+  </div>
+
+  <footer class="portada-footer">
+    <p>&copy; 2025 El barrio | Todos los derechos reservados</p>
+  </footer>
+
+  <script src="js/reproducir.js"></script>
+  <script src="js/carruseles.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+    body {
+      background: #0f0f0f;
+      color: #eee;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: crimson;
+      margin-bottom: 20px;
+    }
+
+    .capitulos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .cap-card {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      width: 220px;
+      padding: 15px;
+      box-shadow: 0 0 10px #000;
+      transition: transform 0.3s;
+    }
+
+    .cap-card:hover {
+      transform: scale(1.05);
+    }
+
+    .cap-card h3 {
+      margin: 0;
+      color: crimson;
+    }
+
+    .cap-card p {
+      font-size: 0.9em;
+      color: #bbb;
+      min-height: 50px;
+    }
+
+    .cap-card button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: crimson;
+      border: none;
+      color: white;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .cap-card button.disabled {
+      background-color: #444;
+      cursor: not-allowed;
+    }
+
+    footer {
+      background: #0f0f0f;
+      color: #777;
+      text-align: center;
+      padding: 10px 0 0;
+      font-size: 0.9em;
+    }
+
+    .firma {
+      text-align: center;
+      color: #999;
+      font-size: 0.85em;
+      padding-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .cap-card {
+        width: 90%;
+      }
+    }
+
+    .btn-back {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #b30000;
+}
