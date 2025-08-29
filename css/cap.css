@@ -155,3 +155,49 @@
 #outroButtons button:hover {
   background: #ffd700;
 }
+
+/* 🎬 Overlay pantalla completa */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 Se adapta a cualquier pantalla */
+}
+
+/* 🔘 Botón para saltar */
+.skip-btn {
+  position: absolute;
+  bottom: 5vh;   /* más flexible que px */
+  right: 5vw;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.skip-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* 📱 Ajustes para celulares */
+@media (max-width: 768px) {
+  .skip-btn {
+    font-size: 0.9rem;
+    padding: 0.8em 1.6em;
+    bottom: 3vh;
+    right: 3vw;
+  }
+}

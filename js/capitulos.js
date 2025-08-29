@@ -70,8 +70,10 @@ window.addEventListener('scroll', () => {
 
 
 // 🎬 Intro video pantalla completa
+// 🎬 Intro video pantalla completa
 const introOverlay = document.getElementById('introOverlay');
 const introVideo = document.getElementById('introVideo');
+const skipBtn = document.getElementById('skipIntro'); // ⬅️ Botón de salto
 
 window.addEventListener('load', () => {
   // 🔒 Bloquear scroll mientras carga o se reproduce el video
@@ -98,11 +100,18 @@ window.addEventListener('load', () => {
     }
   });
 
+  // ✅ Saltar Intro al hacer clic en el botón
+  skipBtn.addEventListener('click', () => {
+    introVideo.pause();
+    introOverlay.classList.add('hidden');
+    document.body.style.overflow = "auto";
+    localStorage.setItem("introSeen", "true");
+  });
+
   // ✅ Al terminar el video, ocultar overlay y habilitar scroll
   introVideo.onended = () => {
     introOverlay.classList.add('hidden');
     document.body.style.overflow = "auto";
-    // 🔐 Guardar que el usuario ya vio la intro
     localStorage.setItem("introSeen", "true");
   };
 });
